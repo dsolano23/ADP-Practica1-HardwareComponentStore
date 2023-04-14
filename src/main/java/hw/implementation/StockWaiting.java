@@ -24,7 +24,7 @@ public class StockWaiting extends ShoppingCart {
 
 	@Override
 	public Integer getPrice(Client client) {
-		return Double.valueOf(calculateBrutePrice()*client.getDiscount()).intValue();
+		
 	}
 
 }

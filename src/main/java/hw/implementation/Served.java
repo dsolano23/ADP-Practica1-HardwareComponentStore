@@ -26,9 +26,6 @@ public abstract class Served extends ShoppingCart {
 		super(date, hour, components);
 	}
 
-	@Override
-	public Integer getPrice(Client client) {
-		return Double.valueOf(calculateBrutePrice()*client.getDiscount()).intValue();
-	}
+
 
 }

@@ -67,10 +67,13 @@ public abstract class ShoppingCart {
 	 * Llamar al getPrice solo tiene sentido cuando se asgina a una venta, es decir a un cliente, por eso necestia un cliente.
 	 * se hace abstracto por si hubiera otro tipo de carritos, por ejemplo un BlackFridayCart : en este caso el carrito puede tener un descuento propio
 	 * y luego ademas aplicar el descuento adicional si el usuario que lo va a coger tuviera mas privilegios de descuento.
+	 * 
 	 * @param client
 	 * @return
 	 */
-	public abstract Integer getPrice(Client client);
+	public Integer getPrice(Client client) {
+		return Double.valueOf(calculateBrutePrice()*client.getDiscount()).intValue();
+	}
 	
 	
 }
