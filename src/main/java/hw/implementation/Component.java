@@ -37,4 +37,16 @@ public class Component {
 	public Integer getStock() {
 		return stock;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj==null)
+			return false;
+		if(obj instanceof Component == false)
+			return false;
+		Component o = (Component)obj;
+		if(this.getName().equals(o.getName()))
+			return true;
+		return false;
+	}
 }
