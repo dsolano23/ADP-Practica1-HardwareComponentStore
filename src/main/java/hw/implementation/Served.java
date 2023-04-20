@@ -3,11 +3,9 @@ package hw.implementation;
 import java.sql.Date;
 import java.util.List;
 /**
- * JUSTIFICACION : Es un tipo de shoping cart que representa un carro de la compra que no esta a la espera de stock y que por lo tanto 
- * se puede calcular el price, por eso price existe aqui y no existe en StockWaiting.
- * 
- * @author dpena
- *
+ * JUSTIFICACION : 
+ * Es un tipo de shoping cart que representa un carro de la compra que no esta a la espera de stock
+ * y que por lo tanto se puede calcular el price, por eso price existe aqui y no existe en StockWaiting.
  */
 public abstract class Served extends ShoppingCart {
 	/**
@@ -15,7 +13,7 @@ public abstract class Served extends ShoppingCart {
 	 */
 	protected Integer price;
 	/**
-	 * ENUNCIADO:En el caso de las compras servidas, el sistema almacena su precio,
+	 * ENUNCIADO: En el caso de las compras servidas, el sistema almacena su precio,
 	 * Por lo que calculamos el precio en el constructor
 	 * @param date
 	 * @param hour
@@ -25,7 +23,4 @@ public abstract class Served extends ShoppingCart {
 	public Served(Date date, Integer hour, List<ComponentInShoppingCart> components) {
 		super(date, hour, components);
 	}
-
-
-
 }

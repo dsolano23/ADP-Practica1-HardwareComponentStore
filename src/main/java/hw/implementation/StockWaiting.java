@@ -4,16 +4,13 @@ import java.sql.Date;
 import java.util.List;
 
 /**
- * ENUNCIADO: En el caso de las compras en espera de stock, el sistema registra los componentes que se están esperando
- * 
- * 
- * @author dpena
- *
+ * ENUNCIADO: En el caso de las compras en espera de stock, 
+ * el sistema registra los componentes que se están esperando
  */
 public class StockWaiting extends ShoppingCart {
 	/**
-	 * Los componentes en espera de stock de una compra tienen que ser componentes de
-		aquella compra
+	 * Los componentes en espera de stock de una compra 
+	 * tienen que ser componentes de aquella compra
 	 * @param date
 	 * @param hour
 	 * @param components
@@ -24,7 +21,6 @@ public class StockWaiting extends ShoppingCart {
 
 	@Override
 	public Integer getPrice(Client client) {
-		
+		return Double.valueOf(calculateBrutePrice()).intValue();
 	}
-
 }
